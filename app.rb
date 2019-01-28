@@ -33,20 +33,18 @@ end
 
   get '/:operation/:number1/:number2' do
     @operation = params[:operation]
+    @num1 = params[:number1].to_i
+    @num2 = params[:number2].to_i
     case @operation
     when "divide"
-      @op = :/
+      @value = @num1/@num2
     when "multiply"
-      @op = :*
+      @value = @num1*@num2
     when "subtract"
-      @op = :-
+      @value = @num1-@num2
     when "add"
-      @op = :+
+      @value = @num1+@num2
     end
-
-  @num1 = params[:number1].to_i
-  @num2 = params[:number2].to_i
-  @value = @num1.public_send(@op, @num2)
   "#{@value}"
   end
 end
