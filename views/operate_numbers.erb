@@ -1,0 +1,11 @@
+<% if @operation == "add" %>
+  <h1>the result is <%= @number1 + @number2 %></h1>
+<% elsif @operation == "subtract" %>
+  <h1>the result is <%= @number1 - @number2 %></h1>
+<% elsif @operation == "multiply" %>
+  <h1>the result is <%= @number1 * @number2 %></h1>
+<% elsif @operation == "divide" %>
+  <h1>the result is <%= @number1 / @number2 %></h1>
+<% else %>
+  <h1> invalid operation
+<% end %>
