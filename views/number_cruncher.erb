@@ -1,0 +1,16 @@
+
+binding.pry
+<% phrase = params[:phrase].to_s %>
+<% repeats = params[:number].to_i %>
+<% printer = "" %>
+
+<% repeats.times {
+    printer << "#{phrase}"%>
+    
+    <% end %>
+<% printer %>
+
+
+<p><%= printer %></p>
+
+
